@@ -121,6 +121,6 @@ class embedurlXBlock(XBlock):
         Make sure to include `student_view_data=scorm` to URL params in the request.
         """
         return {'last_modified': self.new_window_button,
-                'data': self.url
+                'scorm_data': self.url
         }
 	
