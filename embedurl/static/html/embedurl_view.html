@@ -1,0 +1,11 @@
+<div class="pdf_block">
+    <h2 style="display: none;">{{ display_name }}</h2>
+    <iframe
+        src="{{ url }}"
+        frameborder="0" width="100%" height="{{ min_height }}">
+    </iframe>
+    <ul>
+        {% if new_window_button %}
+        	<button onclick='window.open("{{ url }}")'>Open In New Window</button>
+        {% endif %}
+</div>

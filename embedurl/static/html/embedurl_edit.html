@@ -1,0 +1,49 @@
+<div class="wrapper-comp-settings editor-with-buttons is-active" id="settings-tab">
+    <ul class="list-input settings-list">
+        
+         <li class="field comp-setting-entry is-set">
+            <div class="wrapper-comp-setting">
+                <label class="label setting-label" for="pdf_edit_display_name">Display Name</label>
+                <input class="input setting-input" id="pdf_edit_display_name" value="{{ display_name }}" type="text">
+            </div>
+        </li>
+        
+        <li class="field comp-setting-entry is-set">
+            <div class="wrapper-comp-setting">
+                <label class="label setting-label" for="pdf_edit_url">embedUrlXBlock</label>
+                <input class="input setting-input" id="pdf_edit_url" value="{{ url }}" type="text">
+            </div>
+            <span class="tip setting-help">The embedded url for docs</span>
+        </li>
+        
+        <li class="field comp-setting-entry is-set">
+            <div class="wrapper-comp-setting">
+                <label class="label setting-label" for="pdf_edit_allow_download">Enable Open In New Window</label>
+                <select class="input setting-input" id="pdf_edit_allow_download">
+                    <option value="True" {% if new_window_button %}selected{% endif %}>True</option>
+                    <option value="False" {% if not new_window_button %}selected{% endif %}>False</option>
+                </select>
+            </div>
+        </li>
+        
+        <li class="field comp-setting-entry is-set">
+            <div class="wrapper-comp-setting">
+                <label class="label setting-label" for="pdf_edit_source_text">Mininum Height</label>
+                <input class="input setting-input" id="pdf_edit_source_text" value="{{ min_height }}" type="text" placeholder="Enter Height">
+            </div>
+        </li>
+    </ul>
+    
+    <div class="xblock-actions">
+        <ul>
+            <li class="action-item">
+                <a href="#" class="button action-primary action-save">Save</a>
+            </li>
+            <li class="action-item">
+                <a href="#" class="button action-cancel">Cancel</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
