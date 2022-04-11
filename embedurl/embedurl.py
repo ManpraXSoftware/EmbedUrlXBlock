@@ -45,8 +45,8 @@ class embedurlXBlock(XBlock):
         """
         Gets the content of a resource
         """
-        resource_content = pkg_resources.resource_string(__name__, resource_path)
-        return str(resource_content)
+        resource_content = str(pkg_resources.resource_string(__name__, resource_path),'utf-8')
+        return resource_content
 
     def render_template(self, template_path, context={}):
         """
